@@ -1,0 +1,110 @@
+<div class="" ng-controller="homeController">
+    <div id="about-us">
+    <!--about-us-2 start-->
+        <div class="about-us-3 big-padding text-center">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="section">
+                                <h3>Search Your <span>Doctor, Hospitals, Diagnostics and more...</span></h3>
+                                <hr>
+                                <div class="form-body">
+                                    <div class="row">
+                                        
+                                        <div class="col-md-3">
+                                            <div class="form-group">
+                                            <div layout="column" ng-cloak>
+                                                <form ng-submit="$event.preventDefault()">
+                                                    <md-autocomplete
+                                                        ng-disabled="ctrl.isDisabled"
+                                                        md-no-cache="ctrl.noCache"
+                                                        md-selected-item="ctrl.selectedItem"
+                                                        md-search-text-change="ctrl.searchTextChange(ctrl.searchText)"
+                                                        md-search-text="ctrl.searchText"
+                                                        md-selected-item-change="ctrl.selectedItemChange(item)"
+                                                        md-items="item in ctrl.querySearch(ctrl.searchText)"
+                                                        md-item-text="item.display"
+                                                        md-min-length="0"
+                                                        placeholder="Your Location">
+                                                    <md-item-template>
+                                                        <span md-highlight-text="ctrl.searchText" md-highlight-flags="^i">{{item.display}}</span>
+                                                    </md-item-template>
+                                                    <md-not-found>
+                                                        No states matching "{{ctrl.searchText}}" were found.
+                                                        <a ng-click="ctrl.newState(ctrl.searchText)">Create a new one!</a>
+                                                    </md-not-found>
+                                                    </md-autocomplete>
+                                                </form>
+                                            </div>
+                                            </div>
+                                        </div>
+                                        <!--/span-->
+                                        <div class="col-md-7">
+                                            <div class="form-group">
+                                                <div></div>
+                                                <form ng-submit="$event.preventDefault()">
+                                                    <md-autocomplete
+                                                        ng-disabled="ctrl.isDisabled"
+                                                        md-no-cache="ctrl.noCache"
+                                                        md-selected-item="ctrl.selectedItem"
+                                                        md-search-text-change="ctrl.searchTextChange(ctrl.searchText)"
+                                                        md-search-text="ctrl.searchText"
+                                                        md-selected-item-change="ctrl.selectedItemChange(item)"
+                                                        md-items="item in ctrl.querySearch(ctrl.searchText)"
+                                                        md-item-text="item.display"
+                                                        md-min-length="0"
+                                                        placeholder="Search Doctors, Specialists, Dentists, Hospitals">
+                                                    <md-item-template>
+                                                        <span md-highlight-text="ctrl.searchText" md-highlight-flags="^i">{{item.display}}</span>
+                                                    </md-item-template>
+                                                    <md-not-found>
+                                                        No states matching "{{ctrl.searchText}}" were found.
+                                                        <a ng-click="ctrl.newState(ctrl.searchText)">Create a new one!</a>
+                                                    </md-not-found>
+                                                    </md-autocomplete>
+                                                </form>
+                                            </div>
+                                        </div>
+                                        <!--/span-->
+                                        <div class="col-md-1">
+                                                <div class="form-group pull-left">
+                                                <span class="input-group-btn"><a href="doctors.html" class="btn waves-effect waves-light btn-info"><i class="fa fa-search"></i></a></span>
+                                            </div>
+                                            <!--/span-->
+                                        </div>
+                                    </div>
+                                    <!--/row-->
+                                </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <!--about-us-2 end-->
+    </div>
+    <!-- Home Icon Category -->
+    <section class="home-icon-category-block bg-color-white">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="home-category">
+                        <div class="owl-carousel owl-theme">
+                            <div class="item"><a href="javascript:;" class="home-category-icon"><img src="src/assets/images/icons/home-category-icon-1.png" alt="dhc"><span>Dentist</span></a></div>
+                            <div class="item"><a href="javascript:;" class="home-category-icon"><img src="src/assets/images/icons/home-category-icon-2.png" alt="dhc"><span>Gynecologist</span></a></div>
+                            <div class="item"><a href="javascript:;" class="home-category-icon"><img src="src/assets/images/icons/home-category-icon-3.png" alt="dhc"><span>Neurologist</span></a></div>
+                            <div class="item"><a href="javascript:;" class="home-category-icon"><img src="src/assets/images/icons/home-category-icon-4.png" alt="dhc"><span>Pediatrician</span></a></div>
+                            <div class="item"><a href="javascript:;" class="home-category-icon"><img src="src/assets/images/icons/home-category-icon-5.png" alt="dhc"><span>Dermatologist</span></a></div>
+                            <div class="item"><a href="javascript:;" class="home-category-icon"><img src="src/assets/images/icons/home-category-icon-6.png" alt="dhc"><span>Cardiologist</span></a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <dhc-specialization></dhc-specialization>
+    <dhc-about-us></dhc-about-us>
+    <dhc-download-app></dhc-download-app>
+    <dhc-contact-us></dhc-contact-us>
+    <dhc-testimonials></dhc-testimonials>
+    <!-- End Home Icon Category -->
+</div>

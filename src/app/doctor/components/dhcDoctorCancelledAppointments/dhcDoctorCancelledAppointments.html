@@ -1,0 +1,104 @@
+<div id="page-wrapper" ng-controller="dhcDoctorCancelledAppointmentsController">
+    <div class="container-fluid">
+        <div class="row bg-title">
+            <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
+                <h4 class="page-title">Cancelled Appointments</h4>
+            </div>
+            <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12"> 
+                <ol class="breadcrumb">
+                    <li><a href="javascript:;">My Appointments</a></li>
+                    <li class="active">Cancelled</li>
+                </ol>
+            </div>
+            <!-- /.col-lg-12 -->
+        </div>
+        <!--.row-->
+        <div class="row">
+            <div class="col-md-12">
+                <div class="panel panel-default block3">
+                    <div class="panel-heading">Cancelled Appointments
+                        <div class="panel-action">
+                            <a href="javascript:;" data-toggle="collapse" data-target="#booking1" class="btn btn-md btn-info"><i class="fa fa-filter m-r-10"></i>Filter Search</a>
+                        </div>
+                    </div>
+                    <div class="collapse" id="booking1">
+                         <div class="white-box">
+                <h3 class="box-title m-b-30">Advanced Filter</h3>
+                    <form ng-controller="DemoCtrl" ng-cloak class="md-inline-form">
+                    <div class="row">
+                            <div class="col-md-2">
+                                        <div class="form-group">
+                                        <md-input-container>
+                                            <label>From date</label>
+                                            <md-datepicker ng-model="user.submissionDate"></md-datepicker>
+                                          </md-input-container>
+                                        </div>
+                            </div>
+                            <div class="col-md-2">
+                            <div class="form-group">
+                                        <md-input-container>
+                                            <label>To date</label>
+                                            <md-datepicker ng-model="user.submissionDate"></md-datepicker>
+                                          </md-input-container>
+                                        </div>
+                                        </div>
+                            <div class="col-md-2">
+                            <div class="form-group">
+                                        <md-input-container>
+                            <a href="javascript:;" class="btn btn-md btn-info"><i class="fa fa-search m-r-10"></i>Search</a>
+                            </md-input-container>
+                                        </div>
+                            </div>
+                            </div>
+                    </form>		
+                </div>
+                </div>
+                    <div class="panel-wrapper collapse in">
+                        <div class="panel-body">
+                            <div class="table-responsive">
+                        <table id="myTable" class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Doctor</th>
+                                    <th>Hospital Name</th>
+                                    <th>Specialist</th>
+                                    <th>Desease</th>
+                                    <th>Appointment Date</th>
+                                    <th>Time Slot</th>
+                                    <th>Canelletion Date</th>
+                                    <th>Cancelletion Cause</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Gayitri Hospital</td>
+                                    <td>Dr. Timmappa</td>
+                                    <td>MBBS, ENT</td>
+                                    <td>Ear Soring</td>
+                                    <td>13-08-2017</td>
+                                    <td>10:45 AM</td>
+                                    <td>12-08-2017</td>
+                                    <td><span class="label label-danger">Booked Wrong Doctor</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Gayitri Hospital</td>
+                                    <td>Dr. Timmappa</td>
+                                    <td>MBBS, ENT</td>
+                                    <td>Ear Soring</td>
+                                    <td>13-08-2017</td>
+                                    <td>10:45 AM</td>
+                                    <td>11-08-2017</td>
+                                    <td><span class="label label-info">Change Of Plans</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /.row -->
+    </div>
+    <!-- /.container-fluid -->
+</div>

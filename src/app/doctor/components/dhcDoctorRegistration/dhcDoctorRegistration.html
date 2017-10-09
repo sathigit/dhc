@@ -1,0 +1,72 @@
+<div class="panel panel-default" ng-controller="dhcDoctorRegitrationController">
+    <div class="panel-heading">Register Doctor
+        <div class="panel-action">
+                <a data-toggle="modal" data-target="#responsive-modal" href="#responsive-modal" class="text-info pull-right">Not a Doctor?</a>
+            </div>
+        </div>
+        <div class="panel-wrapper collapse in form-div">
+            <div class="panel-body">
+                <form name="doctorRegistration">
+                    <div class="form-group">
+                        <md-input-container class="md-block">
+                            <label>Name</label>
+                            <input required name="name" ng-model="doctorRegistrationUI.name">
+                            <div ng-messages="doctorRegistration.name.$error">
+                                <div ng-message="required">This is required.</div>
+                            </div>
+                        </md-input-container>
+                    </div>
+                    <div class="form-group">
+                        <md-input-container class="md-block">
+                            <label>User Name</label>
+                            <input required name="userName" ng-model="doctorRegistrationUI.userName">
+                            <div ng-messages="doctorRegistration.userName.$error">
+                                <div ng-message="required">This is required.</div>
+                            </div>
+                        </md-input-container>
+                    </div>
+                    <div class="form-group">
+                        <md-input-container class="md-block">
+                            <label>Password</label>
+                            <input required name="password" ng-model="doctorRegistrationUI.password" type="password" ng-blur="checkPassword();">
+                            <div ng-messages="doctorRegistration.password.$error">
+                                <div ng-message="required">This is required.</div><div ng-message="isPasswordNotSame">Password is not matching</div>
+                            </div>
+                            <div ng-if="doctorRegistrationUI.isPasswordNotSame">Password is not matching</div>
+                        </md-input-container>
+                    </div>
+                    <div class="form-group">
+                        <md-input-container class="md-block">
+                            <label>Confirm Password</label>
+                            <input required name="confirmPassword" ng-model="doctorRegistrationUI.confirmPassword" type="password" ng-blur="checkPassword();">
+                            <div ng-messages="doctorRegistration.confirmPassword.$error">
+                                <div ng-message="required">This is required.</div>                                
+                            </div>
+                            <div ng-if="doctorRegistrationUI.isPasswordNotSame">Password is not matching</div>                           
+                        </md-input-container>
+                    </div>
+                    <div class="form-group">
+                        <md-input-container class="md-block">
+                            <label>Mobile</label>
+                            <input required name="mobile" ng-model="doctorRegistrationUI.mobile">
+                            <div ng-messages="doctorRegistration.mobile.$error">
+                                <div ng-message="required">This is required.</div>
+                            </div>
+                        </md-input-container>
+                    </div>
+                    <div class="form-group">
+                        <md-input-container class="md-block">
+                            <label>Email</label>
+                            <input required name="email" ng-model="doctorRegistrationUI.email" type="email">
+                            <div ng-messages="doctorRegistration.email.$error">
+                                <div ng-message="required">This is required.</div>
+                                <div ng-message="email">This field must be a valid email address.</div>
+                            </div>
+                        </md-input-container>
+                    </div>
+                    <button type="submit" class="btn btn-info btn-block waves-effect waves-light m-r-10" ng-click="submitUser()">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

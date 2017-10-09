@@ -1,0 +1,56 @@
+<!-- modal content -->
+<div id="myModal" class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title" id="myModalLabel">Advanced Search</h4>
+            </div>
+            <div class="modal-body">
+                <form ng-cloak >
+                <div class="col-md-12">
+                <div class="form-group">
+                        <md-input-container class="md-block">
+                                  <label>Prescriptions</label>
+                                  <input ng-model="user.ime">
+                                </md-input-container>
+                    </div>
+                </div>
+        <div class="col-md-6">
+                    <div class="form-group">
+                    <md-input-container>
+                        <label>From date</label>
+                        <md-datepicker ng-model="user.submissionDate"></md-datepicker>
+                      </md-input-container>
+                    </div>
+                
+        </div>
+        <div class="col-md-6">
+                    <div class="form-group">
+                    <md-input-container class="md-block">
+                        <label>To date</label>
+                        <md-datepicker ng-model="user.submissionDate"></md-datepicker>
+                      </md-input-container>
+                    </div>
+        </div>
+        <div class="col-md-12">
+        <div class="form-group">
+                    <md-input-container class="md-block">
+                        <md-checkbox name="tos" ng-model="project.tos" required>
+                          Show detailed Iiformation
+                        </md-checkbox>
+                      </md-input-container>
+                    </div>
+        </div>
+        </form>
+            </div>
+            <div class="modal-footer">
+                <button type="submit" class="btn btn-info waves-effect waves-light m-r-10">Search</button>
+                <button type="button" class="btn btn-danger waves-effect" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->

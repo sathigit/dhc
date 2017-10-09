@@ -1,0 +1,5 @@
+<div ng-controller="dhcLayoutController" ng-init="changeMainView()">
+    <dhc-main-page ng-if="registrationPage"></dhc-main-page>  
+    <dhc-doctor-main-page ng-if="doctorMainPage"></dhc-doctor-main-page>  
+    <dhc-user-main-page ng-if="patientMainPage"></dhc-user-main-page>  
+</div>

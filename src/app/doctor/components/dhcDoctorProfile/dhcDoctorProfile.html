@@ -1,0 +1,197 @@
+<!-- Page Content -->
+<div id="page-wrapper" ng-controller="dhcDoctorProfileController">
+    <div class="container-fluid">
+        <div class="row bg-title">
+            <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
+                <h4 class="page-title">My Account</h4>
+            </div>
+            <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12"> 
+                <ol class="breadcrumb">
+                    <li><a href="index.html">My Account</a></li>
+                    <li class="active">Account Setting</li>
+                </ol>
+            </div>
+            <!-- /.col-lg-12 -->
+        </div>
+        <!-- /.row -->
+        <!-- /.row -->
+        <div class="row">
+            <div class="col-md-12">
+                <div class="panel panel-default block3">
+                    <div class="panel-heading">Account Settings
+                    </div>
+                    <div class="panel-wrapper collapse in">
+                        <div class="panel-body">
+                            <!-- Nav tabs -->
+                    <ul class="nav customtab nav-tabs" role="tablist">
+                        <li role="presentation" class="nav-item"><a href="#home1" class="nav-link active" aria-controls="home" role="tab" data-toggle="tab" aria-expanded="true"><span class="visible-xs"><i class="ti-home"></i></span><span class="hidden-xs">Personal Info</span></a></li>
+                        <li role="presentation" class="nav-item"><a href="#profile1" class="nav-link" aria-controls="profile" role="tab" data-toggle="tab" aria-expanded="false"><span class="visible-xs"><i class="ti-user"></i></span> <span class="hidden-xs">Password Settings</span></a></li>
+                    </ul>
+                    <!-- Tab panes -->
+                    <div class="tab-content">
+                        <div role="tabpanel" class="tab-pane fade in active show" id="home1" aria-expanded="true">
+                        <form class="md-inline-form">
+                            <div class="col-md-6">
+                                        <div class="form-group">
+                                            <md-input-container class="md-block">
+                                                      <label>IMA</label>
+                                                      <input ng-model="doctorDetails.ima">
+                                                    </md-input-container>
+                                        </div>
+                                        <div class="form-group">
+                                            <md-input-container class="md-block">
+                                                      <label>First Name</label>
+                                                      <input ng-model="doctorDetails.firstName">
+                                                    </md-input-container>
+                                        </div>
+                                        <div class="form-group">
+                                            <md-input-container class="md-block">
+                                                      <label>Middle Name</label>
+                                                      <input ng-model="doctorDetails.middleName">
+                                                    </md-input-container>
+                                        </div>
+                                        <div class="form-group">
+                                            <md-input-container>
+                                            <label>DOB</label>
+                                            <md-datepicker ng-model="doctorDetails.dob" placeholder="hghg"></md-datepicker>
+                                          </md-input-container>
+                                        </div>
+                                        
+                                        <div class="form-group">
+                                            <md-input-container class="md-block">
+                                                      <label>Address</label>
+                                                      <input ng-model="doctorDetails.address">
+                                                    </md-input-container>
+                                        </div>
+                                        <div class="form-group">
+                                            <md-input-container class="md-block">
+                                                      <label>Taluk</label>
+                                                      <input ng-model="doctorDetails.taluk">
+                                                    </md-input-container>
+                                        </div>
+                                        
+                                        <div class="form-group">
+                                            <md-input-container class="md-block">
+                                                      <label>State</label>
+                                                      <input ng-model="doctorDetails.state">
+                                                    </md-input-container>
+                                        </div>
+                                        <div class="form-group">
+                                            <md-input-container class="md-block">
+                                                      <label>Zip Code</label>
+                                                      <input ng-model="doctorDetails.zipCode">
+                                                    </md-input-container>
+                                        </div>                                        
+                                        <div class="form-group">
+                                            <label class="col-sm-12">Profile Image</label>
+                                            <div class="col-sm-12">
+                                                <img class="img-responsive" src="../plugins/images/users/d1.jpg" alt="" style="max-width:120px;">
+                                            </div>
+                                            <div class="col-sm-12">
+                                                <div class="fileinput fileinput-new input-group" data-provides="fileinput">
+                                                    <div class="form-control" data-trigger="fileinput"> <i class="glyphicon glyphicon-file fileinput-exists"></i> <span class="fileinput-filename"></span></div> <span class="input-group-addon btn btn-default btn-file"> <span class="fileinput-new">Select file</span> <span class="fileinput-exists">Change</span>
+                                                    <input type="file" name="doctorDetails.imagePath"> </span> <a href="#" class="input-group-addon btn btn-default fileinput-exists" data-dismiss="fileinput">Remove</a> </div>
+                                            </div>
+                                        </div>
+                                        <button type="submit" class="btn btn-info waves-effect waves-light m-r-10" ng-click="saveDoctorDetails();"><i class="fa fa-save"></i> Save</button>
+                                        <button type="submit" class="btn btn-danger waves-effect waves-light"><i class="fa fa-close"></i> Cancel</button>                            </div>
+                            <div class="col-md-6">
+                                        <div class="form-group">
+                                            <md-input-container class="md-block">
+                                                      <label>Last Name</label>
+                                                      <input ng-model="doctorDetails.lastName">
+                                                    </md-input-container>
+                                        </div>
+                                        <div class="form-group">
+                                            <md-input-container>
+                                                <label>Gender</label>
+                                                <md-select ng-model="doctorDetails.gender" class="">
+                                                  <md-option value="male" selected>Male</md-option>
+                                                  <md-option value="female">Female</md-option>
+                                                  <md-option value="other">Other</md-option>
+                                                </md-select>
+                                            </md-input-container>
+                                        </div>
+                                        <div class="form-group">
+                                            <md-input-container class="md-block">
+                                                <label>Adhaar Card Number</label>
+                                                <input ng-model="doctorDetails.aadharNumber">
+                                              </md-input-container>
+                                        </div>
+                                        <div class="form-group">
+                                            <md-input-container class="md-block">
+                                                      <label>Phone Number</label>
+                                                      <input ng-model="doctorDetails.phoneNumber">
+                                                    </md-input-container>
+                                        </div>
+                                        <div class="form-group">
+                                            <md-input-container class="md-block">
+                                                      <label>Village</label>
+                                                      <input ng-model="doctorDetails.village">
+                                                    </md-input-container>
+                                        </div>
+                                        <div class="form-group">
+                                            <md-input-container class="md-block">
+                                                      <label>City</label>
+                                                      <input ng-model="doctorDetails.city">
+                                                    </md-input-container>
+                                        </div>
+                                        <div class="form-group">
+                                            <md-input-container class="md-block">
+                                                      <label>Country</label>
+                                                      <input ng-model="doctorDetails.country">
+                                                    </md-input-container>
+                                        </div>
+                                        <div class="form-group">
+                                            <md-input-container class="md-block">
+                                                      <label>Nationality</label>
+                                                      <input ng-model="doctorDetails.nationality">
+                                                    </md-input-container>
+                                        </div>
+                                        <div class="form-group">
+                                        <md-input-container class="md-block">
+                                            <md-checkbox name="tos" ng-model="doctorDetails.donateOrgan" required>
+                                              Willing To Donate Organs
+                                            </md-checkbox>
+                                          </md-input-container>
+                                        </div>
+                            </div>
+                            </form>
+                            <div class="clearfix"></div>
+                        </div>
+                        <div role="tabpanel" class="tab-pane fade" id="profile1" aria-expanded="false">
+                        <div class="col-md-6">
+                                        <div class="form-group">
+                                            <md-input-container class="md-block">
+                                                      <label>Old Password</label>
+                                                      <input ng-model="user.oldpassword">
+                                                    </md-input-container>
+                                        </div>
+                                        <div class="form-group">
+                                            <md-input-container class="md-block">
+                                                      <label>New Password</label>
+                                                      <input ng-model="user.newpwd">
+                                                    </md-input-container>
+                                        </div>
+                                        <div class="form-group">
+                                            <md-input-container class="md-block">
+                                                      <label>Confirm New Password</label>
+                                                      <input ng-model="user.confpwd">
+                                                    </md-input-container>
+                                        </div>
+                                        <button type="submit" class="btn btn-info waves-effect waves-light m-r-10"><i class="fa fa-save"></i> Change Password</button>
+                                        <button type="submit" class="btn btn-danger waves-effect waves-light"><i class="fa fa-close"></i> Cancel</button>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        <!-- /.row -->
+    </div>
+</div>
+<!-- /#page-wrapper -->
